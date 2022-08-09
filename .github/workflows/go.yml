@@ -30,6 +30,9 @@ jobs:
               dep ensure
           fi
 
+      - name: Create .env
+        run: touch .env
+
       - name: Test
         env:
           FOREM_API_KEY: ${{ secrets.FOREM_API_KEY }}
